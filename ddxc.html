@@ -1,0 +1,737 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>地道小吃</title>
+	<style type="text/css">
+		body,div{
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+		}
+		#content{
+			background-image: url(images/bjs.jpg);
+			background-size: 100%;
+			margin: 0 auto;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			text-align: center;
+			background-repeat: no-repeat;
+			position: absolute;
+			width: 1360px;
+			height: 700px;
+		}
+		.biaoti{
+			position: absolute;
+			top: 20px;
+			left: 20px;
+		}
+		.dianji1{
+			position: absolute;
+			top: 180px;
+			left: 380px;
+		}
+		.bj1{
+			position: absolute;
+			top: 300px;
+			left: 180px;
+		}
+		.bj2{
+			position: absolute;
+			top: 300px;
+			left: 550px;
+		}
+		.bj3{
+			position: absolute;
+			top: 300px;
+			left: 930px;
+		}
+		.dpr{
+			position: absolute;
+			top: 280px;
+			left: 215px;
+			
+		}
+		.dpr img{
+			cursor: pointer;
+				transition: all 0.6s;
+		}
+		.dpr img:hover{
+				transform: scale(1.1);
+		}
+		.ljxr{
+			position: absolute;
+			top: 280px;
+			left: 530px;
+		}
+		.ljxr img{
+			cursor: pointer;
+				transition: all 0.6s;
+		}
+		.ljxr img:hover{
+				transform: scale(1.1);
+		}
+		.xhcy{
+			position: absolute;
+			top: 320px;
+			left: 940px;
+		}
+		.xhcy img{
+			cursor: pointer;
+				transition: all 0.6s;
+		}
+		.xhcy img:hover{
+				transform: scale(1.1);
+		}
+		.dong{
+			position: absolute;
+			top: 520px;
+			left: 250px;
+		}
+		.long{
+			position: absolute;
+			top: 520px;
+			left: 610px;
+		}
+		.xi{
+			position: absolute;
+			top: 518px;
+			left: 995px;
+		}
+		.zhuye{
+			position: absolute;
+			top: 465px;
+			left: 45px;
+		}
+		.fanhui{
+			position: absolute;
+			top: 585px;
+			left: 45px;
+		}
+		.khxt{
+			position: absolute;
+			top: 620px;
+			left: 1180px;
+		}
+		
+		 .hide{
+            display: none;
+        }
+        .c1{
+            position: fixed;
+            top:0;
+            bottom: 0;
+            left:0;
+            right: 0;
+            background: rgba(0,0,0,.2);
+            z-index: 2;
+        }
+        .c2{
+            position: absolute;
+			width: 800px;
+			height: 600px;
+			background-image: url(images/ck7.png);
+			background-size: 100%; 
+			background-repeat: no-repeat;
+            top:235px;
+            left: 500px;
+            z-index: 3;
+            margin-top: -150px;
+            margin-left: -200px;
+			border-radius: 12px;
+        }
+		.c3{
+            position: absolute;
+			width: 800px;
+			height: 600px;
+			background-image: url(images/ck8.png);
+			background-size: 100%; 
+			background-repeat: no-repeat;
+            top:235px;
+            left: 500px;
+            z-index: 3;
+            margin-top: -150px;
+            margin-left: -200px;
+			border-radius: 12px;
+        }
+		.c4{
+            position: absolute;
+			width: 800px;
+			height: 600px;
+			background-image: url(images/ck9.png);
+			background-size: 100%; 
+			background-repeat: no-repeat;
+            top:235px;
+            left: 500px;
+            z-index: 3;
+            margin-top: -150px;
+            margin-left: -200px;
+			border-radius: 12px;
+        }
+		.mei{
+			color: #6e6e6e;
+			
+		}
+		.li{color: #6e6e6e;}
+		.textbox1{
+			position: absolute;
+			width: 300px;
+			height: 380px;
+			margin-left: 50px;
+			text-indent: 36px;
+			text-align: left;
+			font-size: 18px;
+			overflow-x: auto;
+			overflow-y: auto;
+		}
+		.textbox2{
+			position: absolute;
+			width: 300px;
+			height: 380px;
+			margin-left: 50px;
+			text-indent: 36px;
+			text-align: left;
+			font-size: 18px;
+			overflow-x: auto;
+			overflow-y: auto;
+		}
+		button{
+			position: absolute;
+			border-radius: 8px;
+			background-color: #6e6e6e;
+			margin-top: 410px;
+			margin-left: 500px;
+			color: white;
+			font-size: 14px;
+			border: 0px;
+		}
+		.dt1{
+		position: fixed;
+		background-image: url( images/dtbj.png);
+		background-size: 100%; 
+	    background-repeat: no-repeat;
+		width: 700px;
+		height: 400px;
+		top: 200px;
+		left: 353px;
+		display: none;
+	}
+	.dt2{
+		position: fixed;
+		background-image: url( images/dtbj.png);
+		background-size: 100%; 
+	    background-repeat: no-repeat;
+		width: 700px;
+		height: 400px;
+		top: 200px;
+		left: 353px;
+		display: none;
+	}
+	.dt3{
+		position: fixed;
+		background-image: url( images/dtbj.png);
+		background-size: 100%; 
+	    background-repeat: no-repeat;
+		width: 700px;
+		height: 400px;
+		top: 200px;
+		left: 353px;
+		display: none;
+	}
+	.dt4{
+		position: fixed;
+		background-image: url( images/dtbj.png);
+		background-size: 100%; 
+	    background-repeat: no-repeat;
+		width: 700px;
+		height: 400px;
+		top: 200px;
+		left: 353px;
+		display: none;
+	}
+	.dt5{
+		position: fixed;
+		background-image: url( images/dtbj.png);
+		background-size: 100%; 
+	    background-repeat: no-repeat;
+		width: 700px;
+		height: 400px;
+		top: 200px;
+		left: 353px;
+		display: none;
+	}
+		
+	.timu{
+		text-align: left;
+		margin-left: 40px;
+		margin-right: 30px;
+	}
+	.answer{
+		margin-left: -500px;
+		font-size: 20px;
+	}
+	.answer li{
+		height: 50px;
+		color: #a52816;
+		
+	}
+	.dtbj2{
+		position: absolute;
+		top: 310px;
+		left:580px;
+	}
+	
+	.dtbj3{
+		position: absolute;
+		top: 300px;
+		left:20px;
+		height: 100px;
+		width: 1080px;
+	}
+	.tj{
+		position: absolute;
+			border-radius: 2px;
+			background-color: #a42917;
+			color: white;
+			font-size: 18px;
+			border: 0px;
+		top: 260px;
+		left: 320px;
+	}
+	#right1{
+		position: absolute;
+		font-size: 18px;
+		text-align: left;
+		height: 50px;
+		width: 250px;
+		top: 160px;
+		left: 300px;
+		color:steelblue;
+	}
+	#right2{
+		position: absolute;
+		font-size: 18px;
+		text-align: left;
+		height: 50px;
+		width: 250px;
+		top: 160px;
+		left: 300px;
+		color:steelblue;
+	}
+	#right3{
+		position: absolute;
+		font-size: 18px;
+		text-align: left;
+		height: 50px;
+		width: 250px;
+		top: 160px;
+		left: 300px;
+		color:steelblue;
+	}
+	#right4{
+		position: absolute;
+		font-size: 18px;
+		text-align: left;
+		height: 50px;
+		width: 250px;
+		top: 160px;
+		left: 300px;
+		color:steelblue;
+	}
+	#right5{
+		position: absolute;
+		font-size: 18px;
+		text-align: left;
+		height: 50px;
+		width: 250px;
+		top: 160px;
+		left: 300px;
+		color:steelblue;
+	}
+	#zy{
+		position: absolute;
+		top: 3px;
+		left: 10px;
+	}
+	#gb{
+		position: absolute;
+	
+	}
+	</style>
+</head>
+
+<body>
+	<div id="content">
+		<div class="biaoti"><img alt="" src="images/D.png" width="90px"></div>
+		<div class="dianji1"><img alt="" src="images/Ddj.png" width="650px"></div>
+		<div class="bj1"><img alt="" src="images/back.png" width="260px"></div>
+		<div class="bj2"><img alt="" src="images/back.png" width="260px"></div>
+		<div class="bj3"><img alt="" src="images/back.png" width="260px"></div>
+		
+		<div class="dpr"><a onClick="Show1()"><img alt="" src="images/pc.png" width="195px"></a></div>
+		<div id="shade1" class="c1 hide"></div>
+            <div id="modal1" class="c2 hide">
+			 <table width="800px">
+				 <tr>
+					 <td><h3 class="mei">美食简介</h3></td>
+					 <td><h3 class="li">历史故事</h3></td>
+				 </tr>
+				 <tr>
+					 <td>
+						<div class="textbox1">
+						 片儿川是浙江省杭州市的一道传统特色小吃，也是杭州奎元馆的名点，该菜品的浇头主要由雪菜、笋片、瘦肉片组成，鲜美可口。已有百余年历史，最早由杭州老店奎元馆首创，其特色在于倒笃菜和笋片的鲜美，让食客吃后回味无穷。片儿川的价格适中，是杭州市民最喜爱的日常小吃之一。
+						<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;片儿川面是杭州奎元馆老店历史上最具名声的面点之一。2013年7月，杭州片儿川荣登 “中国十大名面条”榜单，全城引发一阵香气喷人的“杭儿风”。
+						<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;正宗的片儿川应该是用冬笋的，但是冬笋供应有季节限制，所以到了没有冬笋的季节，可以用其他鲜笋或者茭白来代替。
+						</div>
+					 </td>
+					 <td>
+						 <div class="textbox2">
+						 相传片儿川面，还是奎元馆初创时小面店的看家面，传说是清时某年浙江举行乡试到杭州来赶考的读书人很多，各地考生齐集杭城，店主为招徕这些读书人的生意，就以倒笃菜、笋片、猪肉片烧制成的大众化面专门供应外地书生。在所售之早餐面中添加三只蛋，寓“连中三元”之意。时有一书生因奎元馆面好价廉，常来吃面，后得中乡试举人第一名“解元”，放榜之日，特到店里向店主致谢，因小面店尚没有招牌，就当场题写“奎元馆”三字作为招牌，从此，奎元馆的片儿川面名声大振，食客盈门。凡来杭州应考者，都慕名前来吃面，图个吉利。
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;到本世纪40年代后期，奎元馆已颇有名气，游客中广泛流传着一句口头禅：“到杭州不吃奎元馆的面，等于没有游过杭州。”当时，梅兰芳，盖叫天，周璇、石辉等文艺界知名人士，都是奎元馆的座上客。1945年抗战胜利后，原国民党第19路军军长蔡廷锴将军同李济深先生来到杭州，一起到奎元馆吃黄鱼面，在品尝高兴之时，蔡将军当场挥毫疾书“东南独创”四个大字。
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;奎元馆的片儿川烹调与众不同，先将猪腿肉、笋肉分别切成长方薄片，将倒笃菜切成碎末。将锅放在火上，下猪油烧化后，先下肉片略煸，再投入笋片，加入酱油略煸，最后放碎倒笃菜和适量沸水继续炒匀略煮，即成浇头出锅。在此同时，将面条放入另一沸水锅内煮熟，捞出迅速甩干水分，倒回炒浇头的锅内略煮，加入味精，浇入猪油，起锅，分别盖上浇头即成。面滑汤浓，肉片鲜嫩，笋菜爽口。
+							 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;南宋以来，杭州话多带“儿”音，如“筷子”则念做“筷儿”，且“儿”音较之现在的北方音更为厚重，又因“氽”与“川”同音，本是菜料皆成“片儿状”，于是 “片儿氽”就叫成了“片儿川”。另有一说法：传说苏东坡在杭州当官的时候说过这样一句话：“无竹令人俗，无肉令人瘦”。倒笃菜、冬笋、肉丝，片儿川选用的这几样配料据说也是有讲究的。将这三样材料切成片，然后在沸水中氽一下，据说这便是“片儿川”名字的由来。
+					     </div>
+					 </td>
+				 </tr>
+				 <tr><td><div><button style="cursor: pointer"  onclick="Hide1();">学习完毕</button></div></td></tr>
+			</table>
+           </div>
+			
+<script>
+    function Show1()
+		{
+			document.getElementById('shade1').classList.remove('hide');
+            document.getElementById('modal1').classList.remove('hide');
+        }
+     function Hide1()
+		{
+			document.getElementById('shade1').classList.add('hide');
+            document.getElementById('modal1').classList.add('hide');
+        }
+</script>
+		
+		
+		
+		<div class="ljxr"><a onClick="Show2()"><img alt="" src="images/xlb.png" width="240px"></a></div>
+		<div id="shade2" class="c1 hide"></div>
+            <div id="modal2" class="c3 hide">
+			 <table width="800px">
+				 <tr>
+					 <td><h3 class="mei">美食简介</h3></td>
+					 <td><h3 class="li">历史故事</h3></td>
+				 </tr>
+				 <tr>
+					 <td>
+						<div class="textbox1">
+						 杭州小笼包是浙江省杭州市的一种特色小吃，属于浙菜系,该菜品起源于北宋时期的开封灌汤包，于南宋时期随宋室南渡来到杭州，之后在江南地区发扬光大。
+							<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;要做到皮薄馅靓是有秘诀的,做皮时开粉要用滚水渌熟，皮才软滑，若用生粉就会太干了。馅要有汁才好吃，但馅料有水份会很难包，配好后放进雪柜片刻，使油和水份都凝固才包，蒸熟后的小笼包就会很好吃了。
+						</div>
+					 </td>
+					 <td>
+						 <div class="textbox2">
+						 小笼包的历史可上溯至北宋，尚有类似的“灌汤包子”流传至今。
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;现代形式的小笼包起源于清代道光年间的常州府，并在各地都形成了各自的特色，如常州味鲜，无锡味甜，苏州味美，但都具有皮薄卤足、鲜香美味等共同特点，并在开封、天津等地也得到了传扬。
+							 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;近代江南小笼包真正成形的历史已很难考证，但普遍认为现代小笼包与北宋时期的“山洞梅花包”和“灌汤包子”有着传承上的渊源关系，在靖康之变后由北宋皇室南迁时带入江南后演变而来，与中国北方地区流行的灌汤包子系出同门，千百年来传承一直没有断绝，并在各地得到了创新和发扬。常州万华茶楼在清代道光年间的“加蟹小笼馒头”，上海南翔镇的黄明贤在1871年创制的“南翔小笼馒头”，包括清代光绪年间流行于无锡惠山秦园一带的无锡民间小笼馒头，及开封、天津等地近代创制的小笼包，都各具特色。江南一带的常州、无锡、苏州、上海、南京、杭州、芜湖等地都有着悠久的小笼包烹饪历史，现存着不少以小笼包为特色的百年老店。
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;自50多年前有中国移民在西班牙经营中国餐馆开始，中国的小笼包也开始在西班牙食客中享有盛誉。西班牙语菜单上的解释是：“中心加肉的中国面包”。由于美味可口，有的西班牙餐馆或酒吧也出售类似中国小笼包的食物，但被叫做“西班牙产中式夹肉面包”。
+自从20世纪90年代后，中国移民大量进入西班牙，中国饭店也如雨后春笋般地遍地开花，小笼包是每家饭店必备的主力食品之一。不过那时的小笼包已经不再写成“小笼包”，而是被写成“小龙”。有的写“中国小龙”，有的写“上海小龙”。对于这个“小龙包”，西班牙语的注释更绝：“加中国龙肉的小面包”。
+至于是谁把“小笼包”改成了“小龙”，记者一时无法考证，由于龙是中国的象征，中国人都是龙的传人，“小龙”、“巨龙”反正说的都是中国人、中国物。有的西班牙餐馆随之进行大胆改革，干脆将“小龙包”解释成：“中国的龙面包”。于是“龙面包”这一名称也就在中西饭店里迅速走红，“龙面包”既好吃又易记，不像其他的中餐名字不易说更不易记。
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2000年之后，“小龙包”又发生了变化。为纪念武打巨星李小龙对武打电影的杰出贡献，各国电视台纷纷开辟李小龙电影专题。在西班牙，印有李小龙的彩色招贴画大街小巷都能看见，西班牙小孩更是一口一个Bruce lee（李小龙），一口一个中国功夫。也就在此时，“小龙包”的含义又发生变化，有的饭店将“小龙包”解释成“武打巨星李小龙最喜欢吃的中国肉面包”。“小龙包”的西班牙名就叫“Bruce lee”，人们点菜时对跑堂说，“我要Bruce lee”，跑堂就知道食客要的是中国的小笼包。驰名国外，闻名四海，小笼包无疑是小吃中的出名食品了。
+
+					     </div>
+					 </td>
+				 </tr>
+				 <tr><td><div><button style="cursor: pointer"  onclick="Hide2();">学习完毕</button></div></td></tr>
+			</table>
+           </div>
+<script>
+    function Show2()
+		{
+			document.getElementById('shade2').classList.remove('hide');
+            document.getElementById('modal2').classList.remove('hide');
+        }
+     function Hide2()
+		{
+			document.getElementById('shade2').classList.add('hide');
+            document.getElementById('modal2').classList.add('hide');
+        }
+</script>
+		
+		
+		<div class="xhcy"><a onClick="Show3()"><img alt="" src="images/cbh.png" width="240px"></a></div>
+		<div id="shade3" class="c1 hide"></div>
+            <div id="modal3" class="c4 hide">
+			 <table width="800px">
+				 <tr>
+					 <td><h3 class="mei">美食简介</h3></td>
+					 <td><h3 class="li">历史故事</h3></td>
+				 </tr>
+				 <tr>
+					 <td>
+						<div class="textbox1">
+						 葱包烩是浙江省杭州市的一种传统名点，属于浙菜系；其制作方法是将油条和小葱裹在面饼内，在铁锅上压烤或油炸至春饼脆黄，配上甜面酱和辣酱。
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;葱包烩与南宋奸臣秦桧有关，岳飞被杀害于杭州风波亭，百姓与爱国军将士莫不痛心疾首。杭州有位点心师傅，他用面粉搓捏成两个象征秦桧夫妻的面人，把它们扭在一起，丢进油锅中压烤，以解心中之恨，并称其为“油炸烩儿”。一时，市民争相购买，恨不得一口吞下“油炸烩儿”。这一方式很快被各地仿效。为了避免秦桧起疑，把木字旁的桧改成火字旁的烩。“葱包烩儿”也是同样的寓意。
+							</div>
+					 </td>
+				 
+					 <td>
+						 <div class="textbox2">
+						 南宋时期，金人南下，岳飞精忠报国，率部抗金，取得节节胜利，即将直捣黄龙。奸臣秦桧与高宗皇帝为一己私利，用十二道金牌召回在前线抗战的岳飞，最后以“莫须有”的罪名，将岳飞杀害于杭州风波亭，百姓与爱国军将士莫不痛心疾首。
+						<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;杭州有位点心师傅，他用面粉搓捏成两个象征秦桧夫妻的面人，把它们扭在一起，丢进油锅中炸，以解心中之恨，并称其为“油炸烩儿”。一时，市民争相购买，恨不得一口吞下“油炸烩儿”。这一方式很快被各地仿效。“油炸烩儿”也因此而流传全国各地，成为著名的早点食品。为了避免秦桧起疑，把木字旁的桧改成火字旁的烩。“葱包烩儿”也是同样的寓意。
+					     </div>
+					 </td>
+				 </tr>
+				 <tr><td><div><button style="cursor: pointer"  onclick="Hide3();">学习完毕</button></div></td></tr>
+			</table>
+           </div>
+<script>
+    function Show3()
+		{
+			document.getElementById('shade3').classList.remove('hide');
+            document.getElementById('modal3').classList.remove('hide');
+        }
+     function Hide3()
+		{
+			document.getElementById('shade3').classList.add('hide');
+            document.getElementById('modal3').classList.add('hide');
+        }
+</script>
+		
+		
+		<div class="dong"><a style="cursor: pointer"><img alt="" src="images/pian.png" width="130px"></a></div>
+		<div class="long"><a style="cursor: pointer"><img alt="" src="images/xiao.png" width="125px"></a></div>
+		<div class="xi"><a style="cursor: pointer"><img alt="" src="images/cong.png" width="125px"></a></div>
+		<div class="zhuye"><a href="navigation.html" style="cursor: pointer"><img alt="" src="images/dzy.png" width="46px"></a></div>
+		<div class="fanhui"><a href="lecture.html" style="cursor: pointer"><img alt="" src="images/dfh.png" width="46px"></a></div>
+
+		<!--课后习题-->
+		<div class="khxt" id="dv"><a id="btn" style="cursor: pointer"><img alt="" src="images/dkhxt.png" width="150px"></a></div>
+		<div class="dt1" id="tm1">
+	<script>
+		function my(id)
+		{
+			return document.getElementById(id);
+		}
+		my("btn").onclick=function(){
+			my("dv").style.display="none";
+			my("tm1").style.display="block";
+		}
+	</script>
+			<h2 class="timu">Q1&nbsp;.&nbsp;什么是杭州市的一道特色面食？</h2>
+			<form action="" method="post" name="myform1" id="myform1">
+				<ul class="answer" style="list-style: none;">
+					<li><input type="radio" value="answer11" name="answer">&nbsp;&nbsp;&nbsp;&nbsp;兰州拉面</li>
+					<li><input type="radio" value="answer12" name="answer">&nbsp;&nbsp;&nbsp;&nbsp;鸭血粉丝</li>
+					<li><input type="radio" value="answer13" name="answer">&nbsp;&nbsp;&nbsp;&nbsp;片儿川面</li>
+				</ul>
+				<input class="tj" type="button" value="提交" name="submit" onClick="check1()">
+				<div id="right1"></div>
+					<script>
+						function check1()
+						{
+							var asw1=document.myform1.answer.value;
+							if(asw1=="answer11"||asw1=="answer12")
+								{
+									document.getElementById("right1").innerHTML="答案错误！请认真作答哦！";
+								}
+							else if(asw1==null||asw1=="")
+								{
+									document.getElementById("right1").innerHTML="你还没有选择答案哦！";
+								}
+							else if(asw1=="answer13")
+								{
+									document.getElementById("right1").innerHTML="恭喜你答对了！赶快进入下一题吧！";
+								}
+						}
+					</script>
+				<div class="dtbj2"><a href="#" style="cursor: pointer" id="next1"><img alt="" src="images/jt.png" width="80px"></a></div>
+			</form>
+		</div>
+		
+<!--题目二-->	
+		<div class="dt2" id="tm2" >
+		<script>
+		function my(id)
+		{
+			return document.getElementById(id);
+		}
+		my("next1").onclick=function(){
+			my("tm1").style.display="none";
+			my("tm2").style.display="block";
+		}
+	    </script>
+			<h2 class="timu">Q2&nbsp;.&nbsp;杭州小笼包起源于什么时期的开封灌汤包？</h2>
+			<form action="" method="post" name="myform2" id="myform2">
+				<ul class="answer" style="list-style: none;">
+					<li><input type="radio" value="answer21" name="answer">&nbsp;&nbsp;&nbsp;&nbsp;北宋时期</li>
+					<li><input type="radio" value="answer22" name="answer">&nbsp;&nbsp;&nbsp;&nbsp;南宋时期</li>
+					<li><input type="radio" value="answer23" name="answer">&nbsp;&nbsp;&nbsp;&nbsp;隋唐时期</li>
+				</ul>
+				<input class="tj" type="button" value="提交" name="submit" onClick="check2()">
+				<div id="right2"></div>
+					<script>
+						function check2()
+						{
+							var asw2=document.myform2.answer.value;
+							if(asw2=="answer22"||asw2=="answer23")
+								{
+									document.getElementById("right2").innerHTML="答案错误！请认真作答哦！";
+								}
+							else if(asw2==null||asw2=="")
+								{
+									document.getElementById("right2").innerHTML="你还没有选择答案哦！";
+								}
+							else if(asw2=="answer21")
+								{
+									document.getElementById("right2").innerHTML="恭喜你答对了！赶快进入下一题吧！";
+								}
+						}
+					</script>
+				<div class="dtbj2"><a href="#" style="cursor: pointer" id="next2"><img alt="" src="images/jt.png" width="80px"></a></div>
+			</form>
+		</div>
+	
+<!--题目三-->
+		<div class="dt3" id="tm3" >
+		<script>
+		function my(id)
+		{
+			return document.getElementById(id);
+		}
+		my("next2").onclick=function(){
+			my("tm2").style.display="none";
+			my("tm3").style.display="block";
+		}
+	    </script>
+			<h2 class="timu">Q3&nbsp;.&nbsp;葱包烩与南宋哪位奸臣有关？</h2>
+			<form action="" method="post" name="myform3" id="myform3">
+				<ul class="answer" style="list-style: none;">
+					<li><input type="radio" value="answer31" name="answer">&nbsp;&nbsp;&nbsp;&nbsp;刘整</li>
+					<li><input type="radio" value="answer32" name="answer">&nbsp;&nbsp;&nbsp;&nbsp;秦桧</li>
+					<li><input type="radio" value="answer33" name="answer">&nbsp;&nbsp;&nbsp;&nbsp;童贯</li>
+				</ul>
+				<input class="tj" type="button" value="提交" name="submit" onClick="check3()">
+				<div id="right3"></div>
+					<script>
+						function check3()
+						{
+							var asw3=document.myform3.answer.value;
+							if(asw3=="answer31"||asw3=="answer33")
+								{
+									document.getElementById("right3").innerHTML="答案错误！请认真作答哦！";
+								}
+							else if(asw3==null||asw3=="")
+								{
+									document.getElementById("right3").innerHTML="你还没有选择答案哦！";
+								}
+							else if(asw3=="answer32")
+								{
+									document.getElementById("right3").innerHTML="恭喜你答对了！赶快进入下一题吧！";
+								}
+						}
+					</script>
+				<div class="dtbj2"><a href="#" style="cursor: pointer" id="next3"><img alt="" src="images/jt.png" width="80px"></a></div>
+			</form>
+		</div>
+		
+<!--题目四-->
+		<div class="dt4" id="tm4" >
+		<script>
+		function my(id)
+		{
+			return document.getElementById(id);
+		}
+		my("next3").onclick=function(){
+			my("tm3").style.display="none";
+			my("tm4").style.display="block";
+		}
+	    </script>
+			<h2 class="timu">Q4&nbsp;.&nbsp;以下哪个不是正宗片儿川面的配菜？</h2>
+			<form action="" method="post" name="myform4" id="myform4">
+				<ul class="answer" style="list-style: none;">
+					<li><input type="radio" value="answer41" name="answer">&nbsp;&nbsp;&nbsp;&nbsp;冬笋</li>
+					<li><input type="radio" value="answer42" name="answer">&nbsp;&nbsp;&nbsp;&nbsp;倒笃菜</li>
+					<li><input type="radio" value="answer43" name="answer">&nbsp;&nbsp;&nbsp;&nbsp;萝卜丁</li>
+				</ul>
+				<input class="tj" type="button" value="提交" name="submit" onClick="check4()">
+				<div id="right4"></div>
+					<script>
+						function check4()
+						{
+							var asw4=document.myform4.answer.value;
+							if(asw4=="answer41"||asw4=="answer42")
+								{
+									document.getElementById("right4").innerHTML="答案错误！请认真作答哦！";
+								}
+							else if(asw4==null||asw4=="")
+								{
+									document.getElementById("right4").innerHTML="你还没有选择答案哦！";
+								}
+							else if(asw4=="answer43")
+								{
+									document.getElementById("right4").innerHTML="恭喜你答对了！赶快进入下一题吧！";
+								}
+						}
+					</script>
+				<div class="dtbj2"><a href="#" style="cursor: pointer" id="next4"><img alt="" src="images/jt.png" width="80px"></a></div>
+			</form>
+		</div>
+		
+<!--题目五-->
+		<div class="dt5" id="tm5" >
+		<script>
+		function my(id)
+		{
+			return document.getElementById(id);
+		}
+		my("next4").onclick=function(){
+			my("tm4").style.display="none";
+			my("tm5").style.display="block";
+		}
+	    </script>
+			<h2 class="timu">Q5&nbsp;.&nbsp;葱包烩是由哪种烹饪方式制成？</h2>
+			<form action="" method="post" name="myform5" id="myform5">
+				<ul class="answer" style="list-style: none;">
+					<li><input type="radio" value="answer51" name="answer">&nbsp;&nbsp;&nbsp;&nbsp;炸</li>
+					<li><input type="radio" value="answer52" name="answer">&nbsp;&nbsp;&nbsp;&nbsp;炒</li>
+					<li><input type="radio" value="answer53" name="answer">&nbsp;&nbsp;&nbsp;&nbsp;煎</li>
+				</ul>
+				<input class="tj" type="button" value="提交" name="submit" onClick="check5()">
+				<div id="right5"></div>
+					<script>
+						function check5()
+						{
+							var asw5=document.myform5.answer.value;
+							if(asw5=="answer52"||asw5=="answer53")
+								{
+									document.getElementById("right5").innerHTML="答案错误！请认真作答哦！";
+								}
+							else if(asw5==null||asw5=="")
+								{
+									document.getElementById("right5").innerHTML="你还没有选择答案哦！";
+								}
+							else if(asw5=="answer51")
+								{
+									document.getElementById("right5").innerHTML="知识巩固得不错！继续加油！";
+								}
+						}
+					</script>
+				<div class="dtbj3">
+					<a style="cursor: pointer" onClick="close()"><img id="gb" alt="" src="images/ganbi.png" width="80px"></a>
+				</div>
+			</form>
+		</div>
+		<script>
+			function close(id)
+		{
+			return document.getElementById(id);
+		}
+		close("gb").onclick=function(){
+			close("tm5").style.display="none";
+			close("dv").style.display="block";
+		}
+		</script>
+	</div>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>拼一拼</title>
+<style type="text/css">
+		body,div{
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+		}
+		#content{
+			background-image: url(images/cyxbj.jpg);
+			background-size: 100%;
+			margin: 0 auto;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			text-align: center;
+			background-repeat: no-repeat;
+			position: absolute;
+			width: 1360px;
+			height: 700px;
+		}
+		.jtxx{
+			position: absolute;
+			top: 120px;
+			left: 600px;
+		}
+		.daoyu{
+			position: absolute;
+			top: 40px;
+			left: 790px;
+		}
+		.hzmc{
+			position: absolute;
+			top: 60px;
+			left: 350px;
+		}
+	.pyp{
+		    position: absolute;
+			top: 290px;
+			left: 120px;
+		    
+	    }
+		.hzmc img{
+			cursor: pointer;
+			transition: all 0.6s;
+		}
+		.hzmc img:hover{
+				transform: scale(1.1);
+		}
+		.ddxc{
+			position: absolute;
+			top: 90px;
+			left: 660px;
+		}
+		.ddxc img{
+			cursor: pointer;
+			transition: all 0.6s;
+		}
+		.ddxc img:hover{
+				transform: scale(1.1);
+		}
+	.fh{
+		position: absolute;
+
+		width: 200px;
+		top: 560px;
+		left: 40px;
+	}
+	.fh img{
+			cursor: pointer;
+				transition: all 0.6s;
+		}
+	.fh img:hover{
+				transform: scale(1.2);
+		}
+	    .ptbj{position: relative;
+			background-image: url(images/yxbj.png);
+			background-size: 100%; 
+	        background-repeat: no-repeat;
+		    width: 800px;
+		    height: 480px;
+			top: 180px;
+			left: 280px;
+	}
+	#pintu{
+		width: 600px;
+		height: 600px;
+		margin-left: 200px;
+	}
+	.sm{
+		position: absolute;
+		width: 230px;
+		top: 160px;
+		left: 5px;
+	}
+		#pintu ul li{float: left;list-style: none;margin-left: 1px;margin-top: -3px;}
+	</style>
+</head>
+
+<body>
+	<div id="content">
+	<div class="jtxx"><img alt="" src="images/pp.png" width="150px"></div>
+	<div class="ptbj">
+		<div><img class="sm" alt="" src="images/sm2.png" height="120px"></div>
+		<div id="pintu">
+				<ul id="begin">
+					<li ondrop="drop(event)" ondragover="dropOver(event)">
+						<img class="pt" src="images/pt/pt_02.jpg" alt="" width="180px" height="150px" draggable="true" id="drag1" ondragstart="dragStart(event)" ondragend="dragEnd(event)">
+				    </li>
+					<li ondrop="drop(event)" ondragover="dropOver(event)">
+						<img class="pt" src="images/pt/pt_05.jpg" alt="" width="180px" height="150px" draggable="true" id="drag2" ondragstart="dragStart(event)" ondragend="dragEnd(event)">
+				    </li>
+					<li ondrop="drop(event)" ondragover="dropOver(event)">
+						<img class="pt" src="images/pt/pt_09.jpg" alt="" width="180px" height="150px" draggable="true" id="drag3" ondragstart="dragStart(event)" ondragend="dragEnd(event)">
+				    </li>
+					<li ondrop="drop(event)" ondragover="dropOver(event)">
+						<img class="pt" src="images/pt/pt_01.jpg" alt="" width="180px" height="150px" draggable="true" id="drag4" ondragstart="dragStart(event)" ondragend="dragEnd(event)">
+				    </li>
+					<li ondrop="drop(event)" ondragover="dropOver(event)">
+						<img class="pt" src="images/pt/pt_06.jpg" alt="" width="180px" height="150px" draggable="true" id="drag5" ondragstart="dragStart(event)" ondragend="dragEnd(event)">
+				    </li>
+					<li ondrop="drop(event)" ondragover="dropOver(event)">
+						<img class="pt" src="images/pt/pt_03.jpg" alt="" width="180px" height="150px" draggable="true" id="drag6" ondragstart="dragStart(event)" ondragend="dragEnd(event)">
+				    </li>
+					<li ondrop="drop(event)" ondragover="dropOver(event)">
+						<img class="pt" src="images/pt/pt_08.jpg" alt="" width="180px" height="150px" draggable="true" id="drag7" ondragstart="dragStart(event)" ondragend="dragEnd(event)">
+				    </li>
+					<li ondrop="drop(event)" ondragover="dropOver(event)">
+						<img class="pt" src="images/pt/pt_04.jpg" alt="" width="180px" height="150px" draggable="true" id="drag8" ondragstart="dragStart(event)" ondragend="dragEnd(event)">
+				    </li>
+					<li ondrop="drop(event)" ondragover="dropOver(event)">
+						<img class="pt" src="images/pt/pt_07.jpg" alt="" width="180px" height="150px" draggable="true" id="drag9" ondragstart="dragStart(event)" ondragend="dragEnd(event)">
+				    </li>
+				</ul>
+			</div>
+	</div>
+		<div class="fh"><a style="cursor: pointer" href="game.html"><img alt="" src="images/cyxfh.png" width="80px"></a></div>
+		<script>
+		var start_index;
+		var end_index;
+		function dragStart(event) {
+			console.log("dragStart: " + event.target.id);
+			start_index = event.target.id;
+		}
+		function dragEnd(event) {
+			event.preventDefault();
+		}
+		function dropOver(event) {
+			event.preventDefault();
+		}
+		function drop(event) {
+			event.preventDefault();
+			console.log("drop: "+event.target.id);
+			end_index = event.target.id;
+			exchange(start_index, end_index, "src");
+			check();
+		}
+		function exchange(id1, id2, attri){
+			ele1 = document.getElementById(id1);
+			ele2 = document.getElementById(id2);
+			var tmp_attri = ele1.getAttribute(attri);
+			ele1.setAttribute(attri, ele2.getAttribute(attri));
+			ele2.setAttribute(attri, tmp_attri);			
+		}
+		function check(){
+			var img_list = document.getElementByClassName("pt");
+			var img_src,dot_index,img_index;
+			for(var i=0; i<9; i++){
+				img_src = img_list[i].getAttribute("src");
+				dot_index = img_src.lastIndexOf(".");
+				img_index = Number(img_src.slice(dot_index - 2, dot_index));
+				if (img_index != i+1) return false;
+			}
+			var success = document.getElementById("success");
+			success.style.display = "block";
+		}
+		</script>
+	</div>
+	
+</body>
+</html>

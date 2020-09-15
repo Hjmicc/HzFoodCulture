@@ -1,0 +1,732 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>杭州名菜</title>
+	<style type="text/css">
+		body,div{
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+		}
+		#content{
+			background-image: url(images/bjs.jpg);
+			background-size: 100%;
+			margin: 0 auto;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			text-align: center;
+			background-repeat: no-repeat;
+			position: absolute;
+			width: 1360px;
+			height: 700px;
+		}
+		.biaoti{
+			position: absolute;
+			top: 20px;
+			left: 20px;
+		}
+		.dianji1{
+			position: absolute;
+			top: 180px;
+			left: 380px;
+		}
+		.bj1{
+			position: absolute;
+			top: 300px;
+			left: 180px;
+		}
+		.bj2{
+			position: absolute;
+			top: 300px;
+			left: 550px;
+		}
+		.bj3{
+			position: absolute;
+			top: 300px;
+			left: 930px;
+		}
+		.dpr{
+			position: absolute;
+			top: 300px;
+			left: 200px;
+			baccolor: aquamarine;
+		}
+		.dpr img{
+			cursor: pointer;
+				transition: all 0.6s;
+		}
+		.dpr img:hover{
+				transform: scale(1.1);
+		}
+		.ljxr{
+			position: absolute;
+			top: 320px;
+			left: 535px;
+		}
+		.ljxr img{
+			cursor: pointer;
+				transition: all 0.6s;
+		}
+		.ljxr img:hover{
+				transform: scale(1.1);
+		}
+		.xhcy{
+			position: absolute;
+			top: 320px;
+			left: 922px;
+		}
+		.xhcy img{
+			cursor: pointer;
+				transition: all 0.6s;
+		}
+		.xhcy img:hover{
+				transform: scale(1.1);
+		}
+		.dong{
+			position: absolute;
+			top: 520px;
+			left: 230px;
+		}
+		.long{
+			position: absolute;
+			top: 520px;
+			left: 610px;
+		}
+		.xi{
+			position: absolute;
+			top: 520px;
+			left: 990px;
+		}
+		.zhuye{
+			position: absolute;
+			top: 460px;
+			left: 50px;
+		}
+		.fanhui{
+			position: absolute;
+			top: 580px;
+			left: 50px;
+		}
+		.khxt{
+			position: absolute;
+			top: 620px;
+			left: 1180px;
+		}
+		
+		 .hide{
+            display: none;
+        }
+        .c1{
+            position: fixed;
+            top:0;
+            bottom: 0;
+            left:0;
+            right: 0;
+            background: rgba(0,0,0,.2);
+            z-index: 2;
+        }
+        .c2{
+            position: absolute;
+			width: 800px;
+			height: 600px;
+			background-image: url(images/ck1.png);
+			background-size: 100%; 
+			background-repeat: no-repeat;
+            top:235px;
+            left: 500px;
+            z-index: 3;
+            margin-top: -150px;
+            margin-left: -200px;
+			border-radius: 12px;
+        }
+		.c3{
+            position: absolute;
+			width: 800px;
+			height: 600px;
+			background-image: url(images/ck2.png);
+			background-size: 100%; 
+			background-repeat: no-repeat;
+            top:235px;
+            left: 500px;
+            z-index: 3;
+            margin-top: -150px;
+            margin-left: -200px;
+			border-radius: 12px;
+        }
+		.c4{
+            position: absolute;
+			width: 800px;
+			height: 600px;
+			background-image: url(images/ck3.png);
+			background-size: 100%; 
+			background-repeat: no-repeat;
+            top:235px;
+            left: 500px;
+            z-index: 3;
+            margin-top: -150px;
+            margin-left: -200px;
+			border-radius: 12px;
+        }
+		.mei{
+			color: #a42917;
+			
+		}
+		.li{color: #a42917;}
+		.textbox1{
+			position: absolute;
+			width: 300px;
+			height: 380px;
+			margin-left: 50px;
+			text-indent: 36px;
+			text-align: left;
+			font-size: 18px;
+			overflow-x: auto;
+			overflow-y: auto;
+		}
+		.textbox2{
+			position: absolute;
+			width: 300px;
+			height: 380px;
+			margin-left: 50px;
+			text-indent: 36px;
+			text-align: left;
+			font-size: 18px;
+			overflow-x: auto;
+			overflow-y: auto;
+		}
+		button{
+			position: absolute;
+			border-radius: 8px;
+			background-color: #a42917;
+			margin-top: 410px;
+			margin-left: 500px;
+			color: white;
+			font-size: 14px;
+			border: 0px;
+		}
+		.dt1{
+		position: fixed;
+		background-image: url( images/dtbj.png);
+		background-size: 100%; 
+	    background-repeat: no-repeat;
+		width: 700px;
+		height: 400px;
+		top: 200px;
+		left: 353px;
+		display: none;
+	}
+	.dt2{
+		position: fixed;
+		background-image: url( images/dtbj.png);
+		background-size: 100%; 
+	    background-repeat: no-repeat;
+		width: 700px;
+		height: 400px;
+		top: 200px;
+		left: 353px;
+		display: none;
+	}
+	.dt3{
+		position: fixed;
+		background-image: url( images/dtbj.png);
+		background-size: 100%; 
+	    background-repeat: no-repeat;
+		width: 700px;
+		height: 400px;
+		top: 200px;
+		left: 353px;
+		display: none;
+	}
+	.dt4{
+		position: fixed;
+		background-image: url( images/dtbj.png);
+		background-size: 100%; 
+	    background-repeat: no-repeat;
+		width: 700px;
+		height: 400px;
+		top: 200px;
+		left: 353px;
+		display: none;
+	}
+	.dt5{
+		position: fixed;
+		background-image: url( images/dtbj.png);
+		background-size: 100%; 
+	    background-repeat: no-repeat;
+		width: 700px;
+		height: 400px;
+		top: 200px;
+		left: 353px;
+		display: none;
+	}
+		
+	.timu{
+		text-align: left;
+		margin-left: 40px;
+		margin-right: 30px;
+	}
+	.answer{
+		margin-left: -500px;
+		font-size: 20px;
+	}
+	.answer li{
+		height: 50px;
+		color: #a52816;
+		
+	}
+	.dtbj2{
+		position: absolute;
+		top: 310px;
+		left:580px;
+	}
+	
+	.dtbj3{
+		position: absolute;
+		top: 300px;
+		left:20px;
+		height: 100px;
+		width: 1080px;
+	}
+	.tj{
+		position: absolute;
+			border-radius: 2px;
+			background-color: #a42917;
+			color: white;
+			font-size: 18px;
+			border: 0px;
+		top: 260px;
+		left: 320px;
+	}
+	#right1{
+		position: absolute;
+		font-size: 18px;
+		text-align: left;
+		height: 50px;
+		width: 250px;
+		top: 160px;
+		left: 300px;
+		color:steelblue;
+	}
+	#right2{
+		position: absolute;
+		font-size: 18px;
+		text-align: left;
+		height: 50px;
+		width: 250px;
+		top: 160px;
+		left: 300px;
+		color:steelblue;
+	}
+	#right3{
+		position: absolute;
+		font-size: 18px;
+		text-align: left;
+		height: 50px;
+		width: 250px;
+		top: 160px;
+		left: 300px;
+		color:steelblue;
+	}
+	#right4{
+		position: absolute;
+		font-size: 18px;
+		text-align: left;
+		height: 50px;
+		width: 250px;
+		top: 160px;
+		left: 300px;
+		color:steelblue;
+	}
+	#right5{
+		position: absolute;
+		font-size: 18px;
+		text-align: left;
+		height: 50px;
+		width: 250px;
+		top: 160px;
+		left: 300px;
+		color:steelblue;
+	}
+	#zy{
+		position: absolute;
+		top: 3px;
+		left: 10px;
+	}
+	#gb{
+		position: absolute;
+	
+	}
+	</style>
+</head>
+
+<body>
+	<div id="content">
+		<div class="biaoti"><img alt="" src="images/H.png" width="300px"></div>
+		<div class="dianji1"><img alt="" src="images/dj1.jpg" width="650px"></div>
+		<div class="bj1"><img alt="" src="images/back.png" width="260px"></div>
+		<div class="bj2"><img alt="" src="images/back.png" width="260px"></div>
+		<div class="bj3"><img alt="" src="images/back.png" width="260px"></div>
+		
+		<div class="dpr"><a onClick="Show1()"><img alt="" src="images/dpr.png" width="240px"></a></div>
+		<div id="shade1" class="c1 hide"></div>
+            <div id="modal1" class="c2 hide">
+			 <table width="800px">
+				 <tr>
+					 <td><h3 class="mei">美食简介</h3></td>
+					 <td><h3 class="li">历史故事</h3></td>
+				 </tr>
+				 <tr>
+					 <td>
+						<div class="textbox1">
+						 东坡肉是浙江省杭州市的一道特色名菜，属于浙菜系。据传，北宋文豪苏东坡两次来杭任太守，浚湖筑堤，杭州百姓为感谢他“抬猪挑酒”，他嘱家人按他的烧肉方法烹制而成并犒劳民工，他们食用了这香酥味美的肉后称它为“东坡肉”。杭城菜馆也效法仿制，至今东坡肉已有900多年的历史。
+						 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;东坡肉由猪肉炖制而成。其色、香、味俱佳，深受人们爱好。慢火，少水，多酒，是制作这道菜的窍门。通常为一块约2寸许的方正形猪肉，一半为肥肉，一半为瘦肉，入口香糯、肥而不腻，带有酒香，色泽红亮，味醇汁浓，酥烂而形不碎，十分美味。
+						</div>
+					 </td>
+					 <td>
+						 <div class="textbox2">
+						 东坡肉相传为北宋词人苏东坡（四川眉山人）所创制，最早发源地是四川眉山。原型是徐州回赠肉， 为徐州“东坡四珍”之一。
+                         <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;宋神宗熙宁十年（1077年）四月，苏轼赴任徐州知州。七月七日，黄河在澶州曹村埽一带决口，至八月二十一日洪水围困徐州，水位竟高达二丈八尺。苏轼以身卒之，亲荷畚插，率领禁军武卫营，和全城百姓抗洪筑堤保城。经过七十多个昼夜的艰苦奋战，终于保住了徐州城。全城百姓无不欢欣鼓舞，他们为感谢这位领导有方，与徐州人民同呼吸、共存亡的好知州，纷纷杀猪宰羊，担酒携菜上府慰劳。苏轼推辞不掉，收下后亲自指点家人制成红烧肉，又回赠给参加抗洪的百姓。百姓食后，都觉得此肉肥而不腻、酥香味美，一致称他为“回赠肉”。此后，“回赠肉”就在徐州一带流传，并成徐州传统名菜。这在《徐州文史资料》、《徐州风物志》、《徐州古今名馔》中都有记述。
+                         <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;元丰三年(公元1080年)二月一日，苏轼被贬到黄州任团练副使。他自己开荒种地，便把此地号称“东坡居士”。这就是“东坡肉”的由来。在黄州期间，他亲自动手烹饪红烧肉并将经验写入《食猪肉诗》中。苏轼在徐州及黄州时烹制的红烧肉，只是在当地有影响，在全国并没有多大名气。真正叫得响并闻名全国的红烧肉，是苏轼第二次在杭州时的“东坡肉”。
+                         <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;宋哲宗元祐四年（1089年）一月三日，苏轼来到阔别十五年的杭州任知州。元祐五年五、六月间，浙西一带大雨不止，太湖泛滥，庄稼大片被淹。由于苏轼及早采取有效措施，使浙西一带的人民度过了最困难的时期。他组织民工疏浚西湖，筑堤建桥，使西湖旧貌变新颜。杭州的老百姓很感谢苏轼做的这件好事，人人都夸他是个贤明的父母官。听说他在徐州、黄州时最喜欢吃猪肉，于是到过年的时候，大家就抬猪担酒来给他拜年。苏轼收到后，便指点家人将肉切成方块，烧得红酥酥的，然后分送给参加疏浚西湖的民工们吃，大家吃后无不称奇，把他送来的肉都亲切地称为“东坡肉”。
+                         <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;追本穷源，苏轼的这种红烧肉最早在徐州的创制，在黄州时得到进一步提高，在杭州时闻名全国。
+					     </div>
+					 </td>
+				 </tr>
+				 <tr><td><div><button style="cursor: pointer"  onclick="Hide1();">学习完毕</button></div></td></tr>
+			</table>
+           </div>
+			
+<script>
+    function Show1()
+		{
+			document.getElementById('shade1').classList.remove('hide');
+            document.getElementById('modal1').classList.remove('hide');
+        }
+     function Hide1()
+		{
+			document.getElementById('shade1').classList.add('hide');
+            document.getElementById('modal1').classList.add('hide');
+        }
+</script>
+		
+		
+		
+		<div class="ljxr"><a onClick="Show2()"><img alt="" src="images/ljxr.png" width="300px"></a></div>
+		<div id="shade2" class="c1 hide"></div>
+            <div id="modal2" class="c3 hide">
+			 <table width="800px">
+				 <tr>
+					 <td><h3 class="mei">美食简介</h3></td>
+					 <td><h3 class="li">历史故事</h3></td>
+				 </tr>
+				 <tr>
+					 <td>
+						<div class="textbox1">
+						 龙井虾仁是一道体现西湖秀美气质的传统名菜，属于浙菜系-杭帮菜，该菜品因选用清明节前后的龙井茶配以虾仁制作而得名。该菜品在成菜后，虾仁白嫩、茶叶翠绿，色泽淡雅，味美清口，富有杭州地方特色。
+						 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;菜品选材精细，茶叶用清明前后的龙井新茶，味道清香甘美，口感鲜嫩，不涩不苦；虾仁来自河虾，细嫩爽滑，鲜香适口，虾肉不糟，略有咬劲。用猪油滑炒，荤而不腻。成菜后，有菜形雅、虾仁嫩、茶叶香的特点。菜形雅致，颜色清淡，虾仁玉白，茶叶碧绿，芡汁清亮，食后清口开胃，回味无穷，在杭菜中堪称一绝。
+						</div>
+					 </td>
+					 <td>
+						 <div class="textbox2">
+						 相传，杭州厨师受苏东坡词《望江南》“且将新火试新茶，诗洒趁年华”的启发，选用“色绿、香郁、味甘、形美”的明前龙井新茶和鲜河虾仁烹制而成。成菜虾仁白玉鲜嫩，茶叶碧绿清香，色泽雅致，滋味独特。杭州天外天菜馆是该菜的发源地。
+                         <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;另传有一年清明，乾隆下江南微服私访，曾在龙井附近的一个村姑家避雨，喝了她家的龙井新茶后感觉甚好。雨过天晴，讨得一包茶叶离去。日暮时来到一家小店，点了道清炒虾仁，然后拿出茶叶让店小二泡来喝。不想，掏茶叶包时被店小二无意中瞥见便衣底下的龙袍一角，急忙报告正在炒菜的店主，店主听了一惊，竟把小二刚刚递过来的那包茶叶当成葱花撒进锅里，慌慌张张端了出来。不想乾隆还没吃菜，已闻到那独特的香气，眼前一亮，夹上一筷子入口，呀！甘香弥沦于齿颊，太和之气萦绕两腮，真是无味之至味呀！连连称赞：“好菜！好菜！龙井虾仁！”从此名扬天下。
+					     </div>
+					 </td>
+				 </tr>
+				 <tr><td><div><button style="cursor: pointer"  onclick="Hide2();">学习完毕</button></div></td></tr>
+			</table>
+           </div>
+<script>
+    function Show2()
+		{
+			document.getElementById('shade2').classList.remove('hide');
+            document.getElementById('modal2').classList.remove('hide');
+        }
+     function Hide2()
+		{
+			document.getElementById('shade2').classList.add('hide');
+            document.getElementById('modal2').classList.add('hide');
+        }
+</script>
+		
+		
+		<div class="xhcy"><a onClick="Show3()"><img alt="" src="images/xhcy.png" width="290px"></a></div>
+		<div id="shade3" class="c1 hide"></div>
+            <div id="modal3" class="c4 hide">
+			 <table width="800px">
+				 <tr>
+					 <td><h3 class="mei">美食简介</h3></td>
+					 <td><h3 class="li">历史故事</h3></td>
+				 </tr>
+				 <tr>
+					 <td>
+						<div class="textbox1">
+						 西湖醋鱼，别名为叔嫂传珍，宋嫂鱼，是浙江省杭州市的一道传统地方风味名菜，属于浙菜系。西湖醋鱼通常选用草鱼作为原料，烹制而成。烧好后，浇上一层平滑油亮的糖醋，胸鳍竖起，鱼肉嫩美，带有蟹味，鲜嫩酸甜。
+						 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2018年9月10日，“中国菜”正式发布，“西湖醋鱼“被评为浙江十大经典名菜。西湖醋鱼正式得名，实际上是在建国后，当时将杭州城内流行的“醋溜鱼”做法命名为“西湖醋鱼”。1956年在杭帮菜评选中在三十六道杭帮菜中高居榜首，正式奠定了“江湖地位”。西湖醋鱼作为杭帮菜，一般就流行于江浙一带。
+						</div>
+					 </td>
+					 <td>
+						 <div class="textbox2">
+						 西湖醋鱼的历史，源于南宋京都临安（今杭州），得从南宋杭州的“宋嫂鱼羹”说起。
+                         <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;宋五嫂，为南宋著名民间女厨师，高宗赵构乘龙舟西湖，曾尝其鱼羹，赞美不已，于是名声大振，奉为脍鱼之“师祖”。后来有人吃了这个菜，诗兴大发，在菜馆墙壁上写了一首诗：“裙屐联翩买醉来，绿阳影里上楼台；门前多少游湖艇，半自三潭印月回。何必归寻张翰鲈（誉西湖醋鱼胜过味美适口的松江鲈鱼），鱼美风味说西湖；亏君有此调和手，识得当年宋嫂无。”诗的最后一句，指的就是“西湖醋鱼”。从此，宋嫂鱼羹，遂扬名于世。其后又经名手整治，乃成西湖醋鱼与宋嫂鱼羹两种名菜，流传至今。
+                         <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;民国时期，文人梁实秋曾记载过该菜的烹饪方法：选用西湖草鱼，鱼长不过尺，重不逾半斤，宰割收拾过后沃以沸汤，熟即起锅，勾芡调汁，浇在鱼上，即可上桌。如今在杭州几个著名饭店都有这道菜，但杭州居民家中并不常见，现在部分饭店已经用鲈鱼替代。
+					     </div>
+					 </td>
+				 </tr>
+				 <tr><td><div><button style="cursor: pointer"  onclick="Hide3();">学习完毕</button></div></td></tr>
+			</table>
+           </div>
+<script>
+    function Show3()
+		{
+			document.getElementById('shade3').classList.remove('hide');
+            document.getElementById('modal3').classList.remove('hide');
+        }
+     function Hide3()
+		{
+			document.getElementById('shade3').classList.add('hide');
+            document.getElementById('modal3').classList.add('hide');
+        }
+</script>
+		
+		
+		<div class="dong"><a style="cursor: pointer"><img alt="" src="images/dong.png" width="150px"></a></div>
+		<div class="long"><a style="cursor: pointer"><img alt="" src="images/long.png" width="150px"></a></div>
+		<div class="xi"><a style="cursor: pointer"><img alt="" src="images/xi.png" width="150px"></a></div>
+		<div class="zhuye"><a href="navigation.html" style="cursor: pointer"><img alt="" src="images/zyan.png" width="48px"></a></div>
+		<div class="fanhui"><a href="lecture.html" style="cursor: pointer"><img alt="" src="images/fhan.png" width="52px"></a></div>
+
+		<!--课后习题-->
+		<div class="khxt" id="dv"><a id="btn" style="cursor: pointer"><img alt="" src="images/khxt.png" width="150px"></a></div>
+		<div class="dt1" id="tm1">
+	<script>
+		function my(id)
+		{
+			return document.getElementById(id);
+		}
+		my("btn").onclick=function(){
+			my("dv").style.display="none";
+			my("tm1").style.display="block";
+		}
+	</script>
+			<h2 class="timu">Q1&nbsp;.&nbsp;东坡肉相传为谁创制的？</h2>
+			<form action="" method="post" name="myform1" id="myform1">
+				<ul class="answer" style="list-style: none;">
+					<li><input type="radio" value="answer11" name="answer">&nbsp;&nbsp;&nbsp;&nbsp;李白</li>
+					<li><input type="radio" value="answer12" name="answer">&nbsp;&nbsp;&nbsp;&nbsp;苏东坡</li>
+					<li><input type="radio" value="answer13" name="answer">&nbsp;&nbsp;&nbsp;&nbsp;白居易</li>
+				</ul>
+				<input class="tj" type="button" value="提交" name="submit" onClick="check1()">
+				<div id="right1"></div>
+					<script>
+						function check1()
+						{
+							var asw1=document.myform1.answer.value;
+							if(asw1=="answer11"||asw1=="answer13")
+								{
+									document.getElementById("right1").innerHTML="答案错误！请认真作答哦！";
+								}
+							else if(asw1==null||asw1=="")
+								{
+									document.getElementById("right1").innerHTML="你还没有选择答案哦！";
+								}
+							else if(asw1=="answer12")
+								{
+									document.getElementById("right1").innerHTML="恭喜你答对了！赶快进入下一题吧！";
+								}
+						}
+					</script>
+				<div class="dtbj2"><a href="#" style="cursor: pointer" id="next1"><img alt="" src="images/jt.png" width="80px"></a></div>
+			</form>
+		</div>
+		
+<!--题目二-->	
+		<div class="dt2" id="tm2" >
+		<script>
+		function my(id)
+		{
+			return document.getElementById(id);
+		}
+		my("next1").onclick=function(){
+			my("tm1").style.display="none";
+			my("tm2").style.display="block";
+		}
+	    </script>
+			<h2 class="timu">Q2&nbsp;.&nbsp;龙井虾仁选用什么时节的龙井茶配以虾仁制作？</h2>
+			<form action="" method="post" name="myform2" id="myform2">
+				<ul class="answer" style="list-style: none;">
+					<li><input type="radio" value="answer21" name="answer">&nbsp;&nbsp;&nbsp;&nbsp;清明节前后</li>
+					<li><input type="radio" value="answer22" name="answer">&nbsp;&nbsp;&nbsp;&nbsp;中秋节前后</li>
+					<li><input type="radio" value="answer23" name="answer">&nbsp;&nbsp;&nbsp;&nbsp;端午节前后</li>
+				</ul>
+				<input class="tj" type="button" value="提交" name="submit" onClick="check2()">
+				<div id="right2"></div>
+					<script>
+						function check2()
+						{
+							var asw2=document.myform2.answer.value;
+							if(asw2=="answer22"||asw2=="answer23")
+								{
+									document.getElementById("right2").innerHTML="答案错误！请认真作答哦！";
+								}
+							else if(asw2==null||asw2=="")
+								{
+									document.getElementById("right2").innerHTML="你还没有选择答案哦！";
+								}
+							else if(asw2=="answer21")
+								{
+									document.getElementById("right2").innerHTML="恭喜你答对了！赶快进入下一题吧！";
+								}
+						}
+					</script>
+				<div class="dtbj2"><a href="#" style="cursor: pointer" id="next2"><img alt="" src="images/jt.png" width="80px"></a></div>
+			</form>
+		</div>
+	
+<!--题目三-->
+		<div class="dt3" id="tm3" >
+		<script>
+		function my(id)
+		{
+			return document.getElementById(id);
+		}
+		my("next2").onclick=function(){
+			my("tm2").style.display="none";
+			my("tm3").style.display="block";
+		}
+	    </script>
+			<h2 class="timu">Q3&nbsp;.&nbsp;以下哪个是龙井虾仁的发源地？</h2>
+			<form action="" method="post" name="myform3" id="myform3">
+				<ul class="answer" style="list-style: none;">
+					<li><input type="radio" value="answer31" name="answer">&nbsp;&nbsp;&nbsp;&nbsp;天香楼</li>
+					<li><input type="radio" value="answer32" name="answer">&nbsp;&nbsp;&nbsp;&nbsp;奎元馆</li>
+					<li><input type="radio" value="answer33" name="answer">&nbsp;&nbsp;&nbsp;&nbsp;天外天菜馆</li>
+				</ul>
+				<input class="tj" type="button" value="提交" name="submit" onClick="check3()">
+				<div id="right3"></div>
+					<script>
+						function check3()
+						{
+							var asw3=document.myform3.answer.value;
+							if(asw3=="answer31"||asw3=="answer32")
+								{
+									document.getElementById("right3").innerHTML="答案错误！请认真作答哦！";
+								}
+							else if(asw3==null||asw3=="")
+								{
+									document.getElementById("right3").innerHTML="你还没有选择答案哦！";
+								}
+							else if(asw3=="answer33")
+								{
+									document.getElementById("right3").innerHTML="恭喜你答对了！赶快进入下一题吧！";
+								}
+						}
+					</script>
+				<div class="dtbj2"><a href="#" style="cursor: pointer" id="next3"><img alt="" src="images/jt.png" width="80px"></a></div>
+			</form>
+		</div>
+		
+<!--题目四-->
+		<div class="dt4" id="tm4" >
+		<script>
+		function my(id)
+		{
+			return document.getElementById(id);
+		}
+		my("next3").onclick=function(){
+			my("tm3").style.display="none";
+			my("tm4").style.display="block";
+		}
+	    </script>
+			<h2 class="timu">Q4&nbsp;.&nbsp;西湖醋鱼的别名是什么？</h2>
+			<form action="" method="post" name="myform4" id="myform4">
+				<ul class="answer" style="list-style: none;">
+					<li><input type="radio" value="answer41" name="answer">&nbsp;&nbsp;&nbsp;&nbsp;如鱼得水</li>
+					<li><input type="radio" value="answer42" name="answer">&nbsp;&nbsp;&nbsp;&nbsp;叔嫂传珍</li>
+					<li><input type="radio" value="answer43" name="answer">&nbsp;&nbsp;&nbsp;&nbsp;沉鱼落雁</li>
+				</ul>
+				<input class="tj" type="button" value="提交" name="submit" onClick="check4()">
+				<div id="right4"></div>
+					<script>
+						function check4()
+						{
+							var asw4=document.myform4.answer.value;
+							if(asw4=="answer41"||asw4=="answer43")
+								{
+									document.getElementById("right4").innerHTML="答案错误！请认真作答哦！";
+								}
+							else if(asw4==null||asw4=="")
+								{
+									document.getElementById("right4").innerHTML="你还没有选择答案哦！";
+								}
+							else if(asw4=="answer42")
+								{
+									document.getElementById("right4").innerHTML="恭喜你答对了！赶快进入下一题吧！";
+								}
+						}
+					</script>
+				<div class="dtbj2"><a href="#" style="cursor: pointer" id="next4"><img alt="" src="images/jt.png" width="80px"></a></div>
+			</form>
+		</div>
+		
+<!--题目五-->
+		<div class="dt5" id="tm5" >
+		<script>
+		function my(id)
+		{
+			return document.getElementById(id);
+		}
+		my("next4").onclick=function(){
+			my("tm4").style.display="none";
+			my("tm5").style.display="block";
+		}
+	    </script>
+			<h2 class="timu">Q5&nbsp;.&nbsp;东坡肉最早在何地创制？</h2>
+			<form action="" method="post" name="myform5" id="myform5">
+				<ul class="answer" style="list-style: none;">
+					<li><input type="radio" value="answer51" name="answer">&nbsp;&nbsp;&nbsp;&nbsp;徐州</li>
+					<li><input type="radio" value="answer52" name="answer">&nbsp;&nbsp;&nbsp;&nbsp;黄州</li>
+					<li><input type="radio" value="answer53" name="answer">&nbsp;&nbsp;&nbsp;&nbsp;杭州</li>
+				</ul>
+				<input class="tj" type="button" value="提交" name="submit" onClick="check5()">
+				<div id="right5"></div>
+					<script>
+						function check5()
+						{
+							var asw5=document.myform5.answer.value;
+							if(asw5=="answer52"||asw5=="answer53")
+								{
+									document.getElementById("right5").innerHTML="答案错误！请认真作答哦！";
+								}
+							else if(asw5==null||asw5=="")
+								{
+									document.getElementById("right5").innerHTML="你还没有选择答案哦！";
+								}
+							else if(asw5=="answer51")
+								{
+									document.getElementById("right5").innerHTML="知识巩固得不错！继续加油！";
+								}
+						}
+					</script>
+				<div class="dtbj3">
+					<a style="cursor: pointer" onClick="close()"><img id="gb" alt="" src="images/ganbi.png" width="80px"></a>
+				</div>
+			</form>
+		</div>
+		<script>
+			function close(id)
+		{
+			return document.getElementById(id);
+		}
+		close("gb").onclick=function(){
+			close("tm5").style.display="none";
+			close("dv").style.display="block";
+		}
+		</script>
+	</div>
+</body>
+</html>
+

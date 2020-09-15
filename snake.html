@@ -1,0 +1,156 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>拼一拼</title>
+<style type="text/css">
+		body,div{
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+		}
+		#content{
+			background-image: url(images/cyxbj.jpg);
+			background-size: 100%;
+			margin: 0 auto;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			text-align: center;
+			background-repeat: no-repeat;
+			position: absolute;
+			width: 1360px;
+			height: 700px;
+		}
+		.jtxx{
+			position: absolute;
+			top: 120px;
+			left: 600px;
+		}
+		.daoyu{
+			position: absolute;
+			top: 40px;
+			left: 790px;
+		}
+		.hzmc{
+			position: absolute;
+			top: 60px;
+			left: 350px;
+		}
+	.pyp{
+		    position: absolute;
+			top: 290px;
+			left: 120px;
+		    
+	    }
+		.hzmc img{
+			cursor: pointer;
+			transition: all 0.6s;
+		}
+		.hzmc img:hover{
+				transform: scale(1.1);
+		}
+		.ddxc{
+			position: absolute;
+			top: 90px;
+			left: 660px;
+		}
+		.ddxc img{
+			cursor: pointer;
+			transition: all 0.6s;
+		}
+		.ddxc img:hover{
+				transform: scale(1.1);
+		}
+	.fh{
+		position: absolute;
+
+		width: 200px;
+		top: 560px;
+		left: 40px;
+	}
+	.fh img{
+			cursor: pointer;
+				transition: all 0.6s;
+		}
+	.fh img:hover{
+				transform: scale(1.2);
+		}
+	    .ptbj{position: relative;
+			background-image: url(images/yxbj.png);
+			background-size: 100%; 
+	        background-repeat: no-repeat;
+		    width: 800px;
+		    height: 480px;
+			top: 180px;
+			left: 280px;
+	}
+	#pintu{
+		width: 600px;
+		height: 600px;
+		margin-left: 80px;
+	}
+		#pintu ul li{float: left;list-style: none;margin-left: 1px;margin-top: -3px;}
+	#can{
+		position: absolute;
+		top: 40px;
+		left: 350px;
+	}
+	.jj{
+		position: absolute;
+		width: 280px;
+		top: 160px;
+		left: 30px;
+	}
+	.fh{
+		position: absolute;
+
+		width: 200px;
+		top: 560px;
+		left: 40px;
+	}
+	.fh img{
+			cursor: pointer;
+				transition: all 0.6s;
+		}
+	.fh img:hover{
+				transform: scale(1.2);
+		}
+	</style>
+</head>
+
+<body>
+<div id="content">
+	<div class="jtxx"><img alt="" src="images/tan.png" width="150px"></div>
+	<div class="ptbj">
+		<div class="jj"><img alt="" src="images/sm1.png" width="280px"></div>
+		<canvas id="can" width="400" height="400" style="background: white"></canvas>
+	<script>
+		var sn = [ 42, 41 ], dz = 43, fx = 1, n, ctx = document.getElementById("can").getContext("2d");
+		function draw(t, c) {
+			ctx.fillStyle = c;
+			ctx.fillRect(t % 20 * 20 + 1, ~~(t / 20) * 20 + 1, 18, 18);
+		}
+		document.onkeydown = function(e) {
+			fx = sn[1] - sn[0] == (n = [ -1, -20, 1, 20 ][(e || event).keyCode - 37] || fx) ? fx : n
+		};
+		!function() {
+			sn.unshift(n = sn[0] + fx);
+			if (sn.indexOf(n, 1) > 0 || n<0||n>399 || fx == 1 && n % 20 == 0 || fx == -1 && n % 20 == 19)
+				return alert("GAME OVER!");
+			draw(n, "#00679e");
+			if (n == dz) {
+				while (sn.indexOf(dz = ~~(Math.random() * 400)) >= 0);
+				draw(dz, "black");
+			} else
+				draw(sn.pop(), "white");
+				setTimeout(arguments.callee, 130);
+		}();
+	</script>
+    </div>
+	<div class="fh"><a style="cursor: pointer" href="game.html"><img alt="" src="images/cyxfh.png" width="80px"></a></div>
+</div>	
+</body>
+</html>
+
